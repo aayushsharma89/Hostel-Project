@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add room</title>
+    <style>
+        body{
+    background-color: lightslategray;
+}
+h2{
+    text-align: center;
+    color: white;
+}
+.room{
+    width: 400px;
+    height: 300px;
+    border: 2px solid black;
+    background-color:lightgoldenrodyellow;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    padding-left: 10px;
+    padding-top: 10px;
+    
+}
+button{
+    background-color: blue;
+    color: white;
+    width: 20%;
+    height:30px;
+    text-align: center;
+}
+
+    </style>
+</head>
+<body>
+    <center>
+        <h2>Add Rooms</h2>
+    <div class="room">
+    <form method="post">
+    Room Number: <input name="room_number"><br><br>
+    Room Type:
+    <select name="room_type">
+        <option>AC</option>
+        <option>NON-AC</option>
+    </select><br><br>
+    Capacity: <input name="capacity" type="number"><br><br>
+    Rent: <input name="rent" type="number"><br><br>
+    <button>Add Room</button>
+    </form>
+    </div>
+    </center>
+</body>
+</html>

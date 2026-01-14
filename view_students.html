@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+    background-color: lightslategray;
+}
+h2{
+    text-align: center;
+    color: Red;
+}
+.view{
+    width: 700px;
+    height: 300px;
+    border: 2px solid black;
+    background-color:lightseagreen;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    padding-left: 10px;
+    padding-top: 10px;
+    
+}
+</style>
+</head>
+<body>
+<center>
+    <div class="view">
+        <h2>Students List</h2>
+        <table border="1">
+        <tr>
+            <th>ID</th><th>Name</th><th>Roll</th><th>Room</th><th>Course</th><th>Phone</th><th>Year</th><th>Email</th>
+        </tr>
+        {% for s in students %}
+        <tr>
+            <td>{{s[0]}}</td>
+            <td>{{s[1]}}</td>
+            <td>{{s[2]}}</td>
+            <td>{{s[3]}}</td>
+            <td>{{s[4]}}</td>
+            <td>{{s[5]}}</td> 
+            <td>{{s[6]}}</td>  
+            <td>{{s[7]}}</td>  
+            <td>
+                <a href="/delete_student/{{ s[0] }}"
+                onclick="return confirm('Are you sure?')">
+                Delete
+            </td>
+        </tr>
+
+        {% endfor %}
+        </table>
+    </div>
+</center>
+</body>
+</html>
